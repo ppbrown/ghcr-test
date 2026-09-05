@@ -1,7 +1,0 @@
-services:
-  test:
-    image: ghcr.io/ppbrown/portainer-test:prod
-    pull_policy: always
-    restart: unless-stopped
-    ports:
-      - "8080:8080"

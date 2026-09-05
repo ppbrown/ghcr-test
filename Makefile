@@ -1,3 +1,10 @@
+
+# This makefile isnt really meant to be used most of the time.
+# it was only for initial local,
+#  "Does this image actually work?" testing
+# See instead .github/workflows/
+
+
 IMAGE_NAME := deploytest
 TAG_FILE   := deploytest_tag
 
