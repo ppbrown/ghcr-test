@@ -1,5 +1,5 @@
 services:
-  nginx:
+  test:
     image: deploytest:prod
     restart: unless-stopped
     ports:
