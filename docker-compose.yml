@@ -1,6 +1,6 @@
 services:
   test:
-    image: deploytest:prod
+    image: ghcr.io/ppbrown/portainer-test:prod
     pull_policy: always
     restart: unless-stopped
     ports:
