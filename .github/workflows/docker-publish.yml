@@ -46,4 +46,3 @@ jobs:
             TAG=${{ steps.version.outputs.tag }}
           tags: |
             ${{ env.IMAGE_NAME }}:${{ steps.version.outputs.tag }}
-            ${{ env.IMAGE_NAME }}:prod
