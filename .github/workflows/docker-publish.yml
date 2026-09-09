@@ -2,7 +2,7 @@ name: Build and publish image
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "staging"]
     paths:
       - "Dockerfile"
       - ".github/workflows/docker-publish.yml"
@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate tag
         id: version
-        run: echo "tag=staging-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+        run: echo "tag=${{ github.ref_name }}-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
 
       - name: Log in to ghcr.io
         uses: docker/login-action@v3
