@@ -4,7 +4,7 @@ ARG TAG=UNSET
 
 WORKDIR /app
 
-RUN printf '<!doctype html>\n<html>\n<head><title>GHCR.IO test %s</title></head>\n<body><h1>Now running ghcr-test image %s</h1>\n<p>Custom content: __CUSTOM_CONTENT__</p>\n</body>\n</html>\n' "$TAG" "$TAG" > index.html
+RUN printf '<!doctype html>\n<html>\n<head><title>GHCR.IO test %s</title></head>\n<body><h1>Now running ghcr-test image %s</h1>\n<p>Custom content: __CUSTOM_CONTENT__</p>---\n</body>\n</html>\n' "$TAG" "$TAG" > index.html
 
 EXPOSE 8080
 
